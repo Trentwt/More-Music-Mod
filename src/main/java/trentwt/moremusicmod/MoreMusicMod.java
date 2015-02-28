@@ -1,7 +1,5 @@
 package trentwt.moremusicmod;
 
-import java.util.logging.Logger;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -24,8 +22,10 @@ public class MoreMusicMod {
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		Items.init();
-		Items.register();
+		ModItems.init();
+		ModItems.register();
+		ModBlocks.init();
+		ModBlocks.register();
 	}
 	
 	@EventHandler

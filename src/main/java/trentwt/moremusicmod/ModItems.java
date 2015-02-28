@@ -10,11 +10,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import trentwt.moremusicmod.items.BlankDisc;
 import trentwt.moremusicmod.utils.StringUtils;
 
-public class Items {
+public class ModItems {
 
 	public static Item record_blank;
 
-	
 	public static void init() {
 		record_blank = new BlankDisc().setUnlocalizedName("record_blank");
 	}
@@ -24,7 +23,7 @@ public class Items {
 	}
 	
 	public static void registerItemRenders() throws Exception {
-		for (Field f : Items.class.getDeclaredFields()) {
+		for (Field f : ModItems.class.getDeclaredFields()) {
 			if (f.getType() == Item.class) {
 				registerItemRender((Item) f.get(null));
 				Logger.getLogger("Minecraft").info(((Item)f.get(null)).getUnlocalizedName());

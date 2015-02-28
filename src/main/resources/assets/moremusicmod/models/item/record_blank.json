@@ -1,7 +1,7 @@
 {
     "parent": "builtin/generated",
     "textures": {
-        "layer0": "moremusicmod:items/blank_record"
+        "layer0": "moremusicmod:items/record_blank"
     },
     "display": {
         "thirdperson": {

@@ -2,13 +2,13 @@ package trentwt.moremusicmod.proxy;
 
 import java.util.logging.Logger;
 
-import trentwt.moremusicmod.Items;
+import trentwt.moremusicmod.ModItems;
 
 public class ClientProxy extends CommonProxy {
 	@Override
 	public void registerRenders() {
 		try {
-			Items.registerItemRenders();
+			ModItems.registerItemRenders();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
