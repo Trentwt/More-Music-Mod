@@ -1,6 +1,5 @@
-package trentwt.moremusicmod;
+package trentwt.moremusicmod.blocks;
 
-import trentwt.moremusicmod.blocks.IARDBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.common.registry.GameRegistry;

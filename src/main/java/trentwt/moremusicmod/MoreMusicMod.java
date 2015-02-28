@@ -11,6 +11,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import trentwt.moremusicmod.blocks.ModBlocks;
+import trentwt.moremusicmod.items.ModItems;
 import trentwt.moremusicmod.proxy.CommonProxy;
 import trentwt.moremusicmod.utils.StringUtils;
 
