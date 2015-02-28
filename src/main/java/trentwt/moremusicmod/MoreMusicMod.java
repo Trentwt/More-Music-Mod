@@ -1,5 +1,7 @@
 package trentwt.moremusicmod;
 
+import java.util.logging.Logger;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -21,14 +23,14 @@ public class MoreMusicMod {
 	public static CommonProxy proxy;
 	
 	@EventHandler
-	public void preInitialization(FMLPreInitializationEvent event) {
+	public void preInit(FMLPreInitializationEvent event) {
 		Items.init();
 		Items.register();
 	}
 	
 	@EventHandler
 	public void initialization(FMLInitializationEvent event) {
-		
+		proxy.registerRenders();
 	}
 	
 	@EventHandler
