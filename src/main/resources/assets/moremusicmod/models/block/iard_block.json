@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_top",
+    "textures": {
+        "top": "moremusicmod:blocks/iard_top",
+        "side": "moremusicmod:blocks/iard_side"
+    }
+}

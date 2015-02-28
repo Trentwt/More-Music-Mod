@@ -25,10 +25,8 @@ public class ModItems {
 		for (Field f : ModItems.class.getDeclaredFields()) {
 			if (f.getType() == Item.class) {
 				registerItemRender((Item) f.get(null));
-				Logger.getLogger("Minecraft").info(((Item)f.get(null)).getUnlocalizedName());
 			}
 		}
-		Logger.getLogger("Minecraft").info("registerrenders called! :D");
 	}
 	
 	public static void registerItemRender(Item item) {
