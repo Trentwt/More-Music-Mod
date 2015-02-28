@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "moremusicmod",
+  "name": "More Music Mod",
+  "description": "Enables you to add your own music into the game in the form of a jukebox.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Trentwt"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
