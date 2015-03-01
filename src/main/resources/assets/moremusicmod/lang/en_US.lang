@@ -1,0 +1,6 @@
+tile.iard_block.name=Inter-Dimensional Audio Retrieval Device
+tile.mstorage_block.name=Audio Storage Module
+
+item.record_blank.name=Blank Disc
+
+itemGroup.tabMoreMusicMod=More Music Mod

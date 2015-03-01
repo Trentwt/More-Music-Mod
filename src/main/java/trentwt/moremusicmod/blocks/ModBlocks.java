@@ -12,13 +12,16 @@ import trentwt.moremusicmod.utils.StringUtils;
 
 public class ModBlocks {
 	public static Block iard_block;
+	public static Block mstorage_block;
 	
 	public static void init() {
 		iard_block = new IARDBlock().setUnlocalizedName("iard_block");
+		mstorage_block = new MStorageBlock().setUnlocalizedName("mstorage_block");
 	}
 	
 	public static void register() {
 		GameRegistry.registerBlock(iard_block, iard_block.getUnlocalizedName().substring(5));
+		GameRegistry.registerBlock(mstorage_block, mstorage_block.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerBlockRenders() throws Exception {

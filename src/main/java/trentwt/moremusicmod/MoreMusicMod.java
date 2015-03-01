@@ -2,13 +2,16 @@ package trentwt.moremusicmod;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import trentwt.moremusicmod.blocks.ModBlocks;
@@ -33,6 +36,19 @@ public class MoreMusicMod {
 	@EventHandler
 	public void initialization(FMLInitializationEvent event) {
 		proxy.registerRenders();
+		
+		GameRegistry.addRecipe(new ItemStack(ModBlocks.iard_block), "nin", "dmd", "nin",
+				'n', new ItemStack(Blocks.noteblock),
+				'i', new ItemStack(Items.iron_ingot),
+				'd', new ItemStack(Items.diamond),
+				'm', new ItemStack(ModBlocks.mstorage_block));
+		GameRegistry.addRecipe(new ItemStack(ModItems.record_blank), "iii", "ipi", "iii",
+				'i', new ItemStack(Items.iron_ingot),
+				'p', new ItemStack(Items.paper));
+		GameRegistry.addRecipe(new ItemStack(ModBlocks.mstorage_block), "iji", "iei", "iii",
+				'i', new ItemStack(Items.iron_ingot),
+				'j', new ItemStack(Blocks.jukebox),
+				'e', new ItemStack(Items.ender_pearl));
 	}
 	
 	@EventHandler
@@ -43,7 +59,7 @@ public class MoreMusicMod {
 	
 	
 	
-	public static CreativeTabs tabMoreMusicMod = new CreativeTabs("moreMusicMod") {
+	public static CreativeTabs tabMoreMusicMod = new CreativeTabs("tabMoreMusicMod") {
 	    @Override
 	    @SideOnly(Side.CLIENT)
 	    public Item getTabIconItem() {
