@@ -14,8 +14,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-import trentwt.moremusicmod.blocks.ModBlocks;
-import trentwt.moremusicmod.items.ModItems;
 import trentwt.moremusicmod.proxy.CommonProxy;
 import trentwt.moremusicmod.utils.StringUtils;
 
@@ -42,13 +40,13 @@ public class MoreMusicMod {
 				'i', new ItemStack(Items.iron_ingot),
 				'd', new ItemStack(Items.diamond),
 				'm', new ItemStack(ModBlocks.mstorage_block));
-		GameRegistry.addRecipe(new ItemStack(ModItems.record_blank), "iii", "ipi", "iii",
-				'i', new ItemStack(Items.iron_ingot),
-				'p', new ItemStack(Items.paper));
 		GameRegistry.addRecipe(new ItemStack(ModBlocks.mstorage_block), "iji", "iei", "iii",
 				'i', new ItemStack(Items.iron_ingot),
 				'j', new ItemStack(Blocks.jukebox),
 				'e', new ItemStack(Items.ender_pearl));
+		GameRegistry.addRecipe(new ItemStack(ModItems.record_blank), " p ", "prp", " p ",
+				'r', new ItemStack(Items.redstone),
+				'p', new ItemStack(Items.paper));
 	}
 	
 	@EventHandler

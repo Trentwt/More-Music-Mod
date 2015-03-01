@@ -2,8 +2,8 @@ package trentwt.moremusicmod.proxy;
 
 import java.util.logging.Logger;
 
-import trentwt.moremusicmod.blocks.ModBlocks;
-import trentwt.moremusicmod.items.ModItems;
+import trentwt.moremusicmod.ModBlocks;
+import trentwt.moremusicmod.ModItems;
 
 public class ClientProxy extends CommonProxy {
 	@Override

@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "moremusicmod:blocks/mstorage_block",
+        "down": "moremusicmod:blocks/mstorage_block",
+        "up": "moremusicmod:blocks/disc_writer_side2",
+        "north": "moremusicmod:blocks/disc_writer_side1",
+        "east": "moremusicmod:blocks/disc_writer_side1",
+        "south": "moremusicmod:blocks/disc_writer_side1",
+        "west": "moremusicmod:blocks/disc_writer_side1"
+    }
+}

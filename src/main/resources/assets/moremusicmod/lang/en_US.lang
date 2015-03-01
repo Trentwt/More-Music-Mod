@@ -1,6 +1,8 @@
 tile.iard_block.name=Inter-Dimensional Audio Retrieval Device
 tile.mstorage_block.name=Audio Storage Module
+tile.disc_writer_block.name=Disc Copying Mechanism
 
 item.record_blank.name=Blank Disc
+item.record_written.name=Written Disc
 
 itemGroup.tabMoreMusicMod=More Music Mod
