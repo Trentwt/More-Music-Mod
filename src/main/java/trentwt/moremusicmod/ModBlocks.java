@@ -16,22 +16,17 @@ public class ModBlocks {
 	public static Block iard_block;
 	public static Block mstorage_block;
 	public static Block disc_writer_block;
-	public static Block disc_writer_block_active;
-	
-	private static Boolean isWriting;
 	
 	public static void init() {
 		iard_block = new IARDBlock().setUnlocalizedName("iard_block");
 		mstorage_block = new MStorageBlock().setUnlocalizedName("mstorage_block");
-		disc_writer_block = new DiskWriterBlock(false).setUnlocalizedName("disc_writer_block");
-		disc_writer_block_active = new DiskWriterBlock(true).setUnlocalizedName("disc_writer_block_active");
+		disc_writer_block = new DiskWriterBlock().setUnlocalizedName("disc_writer_block");
 	}
 	
 	public static void register() {
 		GameRegistry.registerBlock(iard_block, iard_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(mstorage_block, mstorage_block.getUnlocalizedName().substring(5));
 		GameRegistry.registerBlock(disc_writer_block, disc_writer_block.getUnlocalizedName().substring(5));
-		GameRegistry.registerBlock(disc_writer_block_active, disc_writer_block_active.getUnlocalizedName().substring(5));
 	}
 	
 	public static void registerBlockRenders() throws Exception {

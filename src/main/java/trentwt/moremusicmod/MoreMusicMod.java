@@ -1,10 +1,15 @@
 package trentwt.moremusicmod;
 
+import java.lang.reflect.Field;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -14,6 +19,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import trentwt.moremusicmod.items.WrittenDisc;
 import trentwt.moremusicmod.proxy.CommonProxy;
 import trentwt.moremusicmod.utils.StringUtils;
 
@@ -47,6 +53,24 @@ public class MoreMusicMod {
 		GameRegistry.addRecipe(new ItemStack(ModItems.record_blank), " p ", "prp", " p ",
 				'r', new ItemStack(Items.redstone),
 				'p', new ItemStack(Items.paper));
+		
+		for (Field f : WrittenDisc.musics.class.getDeclaredFields()) {
+			if (f.getType() == String.class) {
+				try {
+					ItemStack is = new ItemStack(ModItems.record_written);
+					NBTTagCompound nbt = new NBTTagCompound();
+					nbt.setString("musicdata", (String) f.get(null));
+					nbt.setTag("ench", new NBTTagList());
+					is.setTagCompound(nbt);
+					
+					GameRegistry.addShapelessRecipe(is,
+							ModItems.record_written,
+							(Item) Item.itemRegistry.getObject(new ResourceLocation("record_" + (String) f.get(null))));
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 	
 	@EventHandler
@@ -61,7 +85,7 @@ public class MoreMusicMod {
 	    @Override
 	    @SideOnly(Side.CLIENT)
 	    public Item getTabIconItem() {
-	        return Item.getItemFromBlock(Blocks.jukebox);
+	        return ModItems.record_blank;
 	    }
 	};
 }

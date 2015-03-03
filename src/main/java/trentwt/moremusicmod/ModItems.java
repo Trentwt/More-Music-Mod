@@ -1,6 +1,7 @@
 package trentwt.moremusicmod;
 
 import java.lang.reflect.Field;
+import java.util.List;
 import java.util.logging.Logger;
 
 import net.minecraft.client.Minecraft;
@@ -14,10 +15,12 @@ import trentwt.moremusicmod.utils.StringUtils;
 public class ModItems {
 
 	public static Item record_blank;
+	
 	public static Item record_written;
 
 	public static void init() {
 		record_blank = new BlankDisc().setUnlocalizedName("record_blank");
+		
 		record_written = new WrittenDisc().setUnlocalizedName("record_written");
 	}
 	
