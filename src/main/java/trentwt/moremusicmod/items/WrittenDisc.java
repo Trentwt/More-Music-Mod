@@ -1,14 +1,14 @@
 package trentwt.moremusicmod.items;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import scala.actors.threadpool.Arrays;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
@@ -16,6 +16,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class WrittenDisc extends Item {
+	
+	public static final String[] musics = {"13", "cat", "blocks", "chirp", "far", "mall", "mellohi", "stal", "strad", "ward", "11", "wait"};
 	
 	public WrittenDisc() {
 		
@@ -46,20 +48,5 @@ public class WrittenDisc extends Item {
 		}
 		
 		return true;
-	}
-	
-	public class musics {
-		public static final String THIRTEEN = "13";
-		public static final String CAT = "cat";
-		public static final String BLOCKS = "blocks";
-		public static final String CHIRP = "chirp";
-		public static final String FAR = "far";
-		public static final String MALL = "mall";
-		public static final String MELLOHI = "mellohi";
-		public static final String STAL = "stal";
-		public static final String STRAD = "strad";
-		public static final String WARD = "ward";
-		public static final String ELEVEN = "11";
-		public static final String WAIT = "wait";
 	}
 }

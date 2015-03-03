@@ -54,21 +54,19 @@ public class MoreMusicMod {
 				'r', new ItemStack(Items.redstone),
 				'p', new ItemStack(Items.paper));
 		
-		for (Field f : WrittenDisc.musics.class.getDeclaredFields()) {
-			if (f.getType() == String.class) {
-				try {
-					ItemStack is = new ItemStack(ModItems.record_written);
-					NBTTagCompound nbt = new NBTTagCompound();
-					nbt.setString("musicdata", (String) f.get(null));
-					nbt.setTag("ench", new NBTTagList());
-					is.setTagCompound(nbt);
+		for (String song : WrittenDisc.musics) {
+			try {
+				ItemStack is = new ItemStack(ModItems.record_written);
+				NBTTagCompound nbt = new NBTTagCompound();
+				nbt.setString("musicdata", song);
+				nbt.setTag("ench", new NBTTagList());
+				is.setTagCompound(nbt);
 					
-					GameRegistry.addShapelessRecipe(is,
-							ModItems.record_written,
-							(Item) Item.itemRegistry.getObject(new ResourceLocation("record_" + (String) f.get(null))));
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+				GameRegistry.addShapelessRecipe(is,
+						ModItems.record_written,
+						(Item) Item.itemRegistry.getObject(new ResourceLocation("record_" + song)));
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		}
 	}
